@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ACME_Logout" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1078,1177" sap2010:WorkflowViewState.IdRef="ACME_Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ACME_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ACMEWindow" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1894,797</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ACME_Logout_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -87,7 +95,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ACME_Logout" sap:VirtualizedContainerService.HintSize="546,810" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ACME_Logout" sap:VirtualizedContainerService.HintSize="546,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="WindowSelector" />
     </Sequence.Variables>
@@ -97,13 +105,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Attempting to elegantly close the ACME System in Chrome browser&quot;]" />
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open Never, Close Always" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="484,518" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="Never" OutUiElement="[WindowSelector]" ScopeGuid="ef200c29-b643-471a-bc60-ef4f5a54323a" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open Never, Close Always" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="484,440" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_ACMEWindow]" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="Never" ScopeGuid="ef200c29-b643-471a-bc60-ef4f5a54323a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -113,7 +121,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="1793, 165, 80, 50" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:text='Log Out' /&gt;" Guid="5fdd1d82-4884-4aa4-a54e-329a56fc56fa" InformativeScreenshot="e36d13ffb192c12b2d43eafbc82f466b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1567, 165, 67, 50" ElementType="Text" FriendlyName="'Home'" FullSelectorArgument="&lt;webctrl parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' aaname='Home' check:innerText='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAA2CAYAAACVzoR7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF6SURBVGhD7dVLboMwFIVhD1kDQgjYQyvRjNvOySpYQ8QSWAJrvcVgJwYup4+49KGD9A2InYd/DDEPj09COsYBzPPri5DOpGkqpDNZlgnpTJ7nQjpTFIWQzpRlKaQzVVUJ6RgHYByAcQDGARgHYByAcQDGARgHYByAcQDGARgHiBSnkW7opT1tx+q2l6FvpV69/hcwDvADcezcQQanb+vl3EsjzeU23p3d6/4947iff32PH9v5DV91cJw5zC3I8twv1AYJz69BTq30wfcsP3t07sb5nTT+/E4R4/irp3AL2CzGCha0GV/FqKpa2t7H0y+I3XXhbrzHoTtnul1Wt8UcAMUJd0IQZxpbXQSHcaYx/TtjOTTOZvHWu7fVThx3K/vn03f4fQ/kD8dx8xfjcYMdHMeaF6A9Hz4bxwr/9q2YOylSnP+JcQDGARgHYByAcQDGARgHYByAcQDGARgHYByAcQDGARgHYByAcQDGARgHMEmSCOmM8Ng5RN4AmzVhynPba2IAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
